@@ -1,0 +1,11 @@
+{
+    "bounds": "114.597,2.6317,115.2205,3.0925",
+    "center": "114.9184,2.8731,11",
+    "minzoom": "11",
+    "maxzoom": "15",
+    "name": "testmap",
+    "description": "",
+    "attribution": "",
+    "template": "",
+    "version": "1.0.0"
+}
