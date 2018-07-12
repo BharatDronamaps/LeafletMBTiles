@@ -26,7 +26,7 @@
 
     var map = new L.Map('map', {
 		center: [2.8832,114.9071],
-		zoom:11
+		zoom:12
 	});
 
 	var mb = L.tileLayer('./test_raster/{z}/{x}/{y}.png', {
@@ -34,13 +34,6 @@
 		maxZoom: 16,
 		attribution: 'Image tiles by <a href="https://github.com/wslerry">LWS</a>'
 	}).addTo(map);
-
-	mb.on('databaseloaded', function(ev) {
-		console.info('MBTiles DB loaded', ev);
-	});
-	mb.on('databaseerror', function(ev) {
-		console.info('MBTiles DB error', ev);
-	});
 
   </script>
 </body>
