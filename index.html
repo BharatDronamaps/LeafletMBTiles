@@ -12,8 +12,8 @@
   <title>Leaflet.TileLayer.MBTiles demo</title>
   <style>
     #map {
-      width:600px;
-      height:400px;
+      width:100%;
+      height:100vh;
     }
   </style>
 </head>
@@ -26,12 +26,13 @@
 
     var map = new L.Map('map', {
 		center: [2.8832,114.9071],
-		zoom:3
+		zoom:11
 	});
 
-	var mb = L.tileLayer.mbTiles('./img.mbtiles', {
-		minZoom: 0,
-		maxZoom: 16
+	var mb = L.tileLayer('./test_raster/{z}/{x}/{y}.png', {
+		minZoom: 11,
+		maxZoom: 16,
+		attribution: 'Image tiles by <a href="https://github.com/wslerry">LWS</a>'
 	}).addTo(map);
 
 	mb.on('databaseloaded', function(ev) {
